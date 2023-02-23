@@ -28,10 +28,10 @@ body {
 }
 
 body {
-  color: #000;
+  color: #444240;
   line-height: 1;
   font-family: "Roboto", sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -111,4 +111,153 @@ h6 {
   box-sizing: content-box;
   margin: 0 auto;
   padding: 0 0.9375rem;
+}
+
+.header__body {
+  min-height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-family: "Playfair+Display", serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.14em;
+  color: #555248;
+}
+.header__menu {
+  flex: 0 1 422px;
+  margin: 0 10px;
+}
+.header__actions {
+  flex: 0 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+.menu__item:not(:last-child) {
+  padding-right: 10px;
+}
+.menu__link {
+  color: #555248;
+  transition: all 0.3s ease 0s;
+}
+.menu__link:hover {
+  color: #000000;
+}
+
+.actions-header__favorites {
+  position: relative;
+}
+.actions-header__favorites span {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #e6c8b4;
+  color: #1B1A17;
+  font-size: 8px;
+  line-height: 9px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.actions-header__basket {
+  position: relative;
+}
+.actions-header__basket span {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #e6c8b4;
+  color: #1B1A17;
+  font-size: 8px;
+  line-height: 9px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: #444240;
+  color: #ffffff;
+  min-height: 17.1875rem;
+}
+.footer__body {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 70px;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+.footer__list {
+  margin-top: 33px;
+}
+.footer__link {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 5px 0;
+  transition: all 0.3s ease 0s;
+}
+.footer__link:hover {
+  color: rgb(255, 255, 255);
+}
+.footer-column h2 {
+  margin-top: 4px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.foorer__logo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-family: "Playfair+Display", serif;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.14em;
+}
+.foorer__logo img {
+  width: 25px;
+  height: 25px;
+  filter: invert(1) contrast(2);
+}
+
+.contacts-footer__item {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 5px 0;
+  transition: all 0.3s ease 0s;
+}
+.contacts-footer__item:hover {
+  color: rgb(255, 255, 255);
 }
