@@ -126,7 +126,12 @@
 	&__header {
 		max-height: rem(798);
 	}
+	&__popular {
+		min-height: rem(720);
+		background-color: #ffffff;
+	}
 }
+
 
 //========================================================
 // !SECTION .header-page
@@ -174,9 +179,10 @@
 	}
 
 	&__images {
-		flex-wrap: 0 0 50%;
+		// flex: 0 0 50%;
 		display: flex;
 		align-items: flex-start;
+		position: relative;
 	}
 
 	&__price {
@@ -210,8 +216,9 @@
 
 	&__backdrop {
 		position: absolute;
-		top:0;
-		left: 35%;
+		top: 50%;
+		left: -70%;
+		transform: translate(70%, -50%);
 		width: 500px;
 		height: 1000px;
 		// background-color: #1B1A17;
@@ -226,6 +233,10 @@
 
 	&__detail {
 		align-self: flex-end;
+		font-family: 'Prata';
+		line-height: percent(22, 16);
+		color: #1B1A17;
+		white-space: nowrap;
 		margin-bottom: rem(138);
 		position: relative;
 	}
@@ -247,6 +258,140 @@
 	white-space: nowrap;
 }
 .button {
+}
+
+
+
+
+
+//========================================================
+// !SECTION .popular-page
+//========================================================
+
+.popular-page {
+
+	&__body {
+	}
+
+	&__title {
+		padding: rem(50) 0 0 0;
+		text-align: center;
+	}
+
+	&__actions {
+		text-align: right;
+	}
+
+	&__items {
+		margin-top: 70px;
+	}
+}
+
+.actions-popular {
+
+	&__show {
+		position: relative;
+	}
+	&__show::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background-color: #C4C0B6;
+		bottom: -10px;
+		left: 0;
+		cursor: default;
+
+	}
+}
+.items-popular {
+
+	&__row {
+		display: flex;
+		// margin: 0px -10px;
+	}
+
+	&__item {
+		// padding: 0px 10px;
+		flex: 0 1 33.333%;
+	}
+}
+.item-popular {
+
+	&__content {
+	 min-height: 400px;
+	}
+
+	&__title {
+		font-size: rem(14);
+		line-height: percent(24, 14);
+		letter-spacing: 0.03em;
+		font-weight: 700;
+		color: rgba(27, 26, 23, 0.82);
+		font-family: 'Playfair+Display', serif;
+		margin-bottom: 10px;
+	}
+
+	&__price {
+		font-family: 'Prata', serif;
+		font-size: rem(12);
+		line-height: percent(16, 12);
+		color: rgba(27, 26, 23, 0.82);
+	}
+	&__price::after {
+		content: '₽';
+		font-size: 14px;
+		padding-left: 4px;
+		
+	}
+
+	&__image {
+		position: relative;
+	}
+	&__image::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+  	border-radius: 50%; 
+		width: 313px;
+		height: 313px;
+  	padding: 1px; 
+  	background:linear-gradient(-90deg,#E2D0C4,#ffffff); 
+  	-webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+	}
+	&__image img {
+		// position: absolute;
+		width: 313px;
+		height: 313px;
+	}
+
+	&__actions {
+		margin-top: rem(18);
+		padding-left: 48px;
+
+	}
+
+	&__info {
+		font-family: 'Playfair+Display';
+		font-size: rem(16);
+		line-height: percent(21, 16);
+		color: #1B1A17;
+		position: relative;
+	}
+
+	&__info::before {
+		content: '';
+		position: absolute;
+		width: rem(30);
+		height: rem(1);
+		left: rem(-48);
+		top: 50%;
+		background-color: #8B8371;
+	}
 }
 
 //========================================================
