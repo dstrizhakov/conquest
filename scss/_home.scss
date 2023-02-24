@@ -9,7 +9,7 @@
 		}
 
 		&__body {
-			min-height: 85px;
+			min-height: rem(85);
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -21,18 +21,18 @@
 			align-items: center;
 			font-family: 'Playfair+Display', serif;
 			font-size: rem(12);
-			line-height: rem(16);
+			line-height: percent(16, 12);
 			letter-spacing: 0.14em;
 			color: #555248;
 		}
 
 		&__menu {
-			flex: 0 1 422px;
+			flex: 0 1 rem(422);
 			margin: 0 10px;
 		}
 
 		&__actions {
-			flex: 0 0 100px;
+			flex: 0 0 rem(100);
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -47,11 +47,11 @@
 			display: flex;
 			justify-content: space-between;
 			font-size: rem(14);
-			line-height: rem(16);
+			line-height: percent(16, 14);
 		}
 
 		&__item:not(:last-child) {
-			padding-right: 10px;
+			padding-right: rem(10);
 		}
 
 		&__link {
@@ -71,18 +71,19 @@
 			position: relative;
 			& span {
 				position: absolute;
-				top: -6px;
-				right: -6px;
+				top: rem(-6);
+				right: rem(-6);
 				background-color: #e6c8b4;
 				color: #1B1A17;
-				font-size: 8px;
-				line-height: 9px;
-				width: 13px;
-				height: 13px;
+				font-size: rem(8);
+				line-height: percent(9, 8);
+				width: rem(13);
+				height: rem(13);
 				border-radius: 50%;
-				display: inline-flex;
+				display: flex;
 				justify-content: center;
 				align-items: center;
+				padding-top: 2px;
 			}
 
 		}
@@ -91,18 +92,19 @@
 			position: relative;
 			& span {
 				position: absolute;
-				top: -6px;
-				right: -6px;
+				top: rem(-6);
+				right: rem(-6);
 				background-color: #e6c8b4;
 				color: #1B1A17;
-				font-size: 8px;
-				line-height: 9px;
-				width: 13px;
-				height: 13px;
+				font-size: rem(8);
+				line-height: percent(9, 8);
+				width: rem(13);
+				height: rem(13);
 				border-radius: 50%;
-				display: inline-flex;
+				display: flex;
 				justify-content: center;
 				align-items: center;
+				padding-top: 2px;
 			}
 		}
 }
@@ -110,8 +112,126 @@
 
 
 
+//========================================================
+// !MAIN
+//========================================================
 
+.page {
 
+	&__container {
+	}
+
+	&__header {
+	}
+}
+
+//========================================================
+// !SECTION .header-page
+//========================================================
+.header-page {
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 20px 0px 83px;
+	}
+
+	&__content p {
+		line-height: percent(21, 14);
+		color: rgba(27, 26, 23, 0.82);
+		max-width: rem(250);
+	}
+
+	&__title {
+		font-family: 'Playfair+Display', serif;
+		font-size: rem(45);
+		line-height: percent(60, 45);
+		color: #1b1a17;
+		white-space: nowrap;
+		margin-bottom: rem(16);
+		position: relative;
+	}
+	&__title::before {
+		content: '';
+		position: absolute;
+		width: rem(50);
+		height: rem(1);
+		left: rem(-65);
+		top: 50%;
+		background-color: #8B8371;
+	}
+
+	&__subtitle {
+		margin-bottom: rem(39);
+	}
+
+	&__button {
+		margin-top: 64px;
+	}
+
+	&__images {
+		flex-wrap: 0 0 50%;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__price {
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 8px;
+		position: relative;
+		font-family: 'Prata';
+		line-height: percent(22, 16);
+		color: #1B1A17;
+		white-space: nowrap;
+		margin-top: rem(138);
+	}
+	&__price::after {
+		content: url(../img/icons/ruble.svg);
+	}
+
+	&__price::before {
+		content: '';
+		position: absolute;
+		width: rem(50);
+		height: rem(1);
+		left: rem(83);
+		top: 50%;
+		background-color: #8B8371;
+	}
+
+	&__image {
+	}
+
+	&__backdrop {
+	}
+
+	&__detail {
+		align-self: flex-end;
+		margin-bottom: rem(138);
+		position: relative;
+	}
+	&__detail::before {
+		content: '';
+		position: absolute;
+		width: rem(50);
+		height: rem(1);
+		left: rem(-65);
+		top: 50%;
+		background-color: #8B8371;
+	}
+}
+.subtitle {
+	font-family: 'Playfair+Display', serif;
+	font-size: rem(30);
+	line-height: percent(40, 30);
+	color: #1b1a17;
+	white-space: nowrap;
+}
+.button {
+}
 
 //========================================================
 // !FOOTER
@@ -127,7 +247,7 @@
 	&__body {
 		display: flex;
 		justify-content: space-around;
-		padding-top: 70px;
+		padding-top: rem(70);
 	}
 
 	&__main {
@@ -136,7 +256,7 @@
 	&__contacts {
 		display: flex;
 		flex-direction: column;
-		margin-top: 28px;
+		margin-top: rem(28);
 		font-size: rem(12);
 		line-height: rem(14);
 		color: rgba(255, 255, 255, 0.75);
@@ -146,7 +266,7 @@
 	}
 
 	&__list {
-		margin-top: 33px;
+		margin-top: rem(33);
 	}
 
 	&__link {
@@ -154,7 +274,7 @@
 		font-size: rem(12);
 		line-height: rem(14);
 		color: rgba(255, 255, 255, 0.75);
-		padding: 5px 0;
+		padding: rem(5) 0;
 		transition: all 0.3s ease 0s;
 	}
 	&__link:hover {
@@ -171,7 +291,7 @@
 }
 .footer-column {
  & h2 {
-	margin-top: 4px;
+	margin-top: rem(4);
 	font-weight: 700;
 	font-size: rem(14);
 	line-height: rem(16);
@@ -203,7 +323,7 @@
 		font-size: rem(12);
 		line-height: rem(14);
 		color: rgba(255, 255, 255, 0.75);
-		padding: 5px 0;
+		padding: rem(5) 0;
 		transition: all 0.3s ease 0s;
 	}
 	&__item:hover {
