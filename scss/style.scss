@@ -11,6 +11,7 @@ $fontSize: rem(16); // где 14(px) - размер шрифта по умолч
 
 // Основные цвета
 $mainColor: #444240; // Цвет шрифта по умолчанию
+$mainBackgroundColor: #FDFDFB; // почти белый #FDFDFB
 
 // Минимальная ширина страницы
 $minWidth: 320;
@@ -109,5 +110,5 @@ body {
 	}
 }
 
-@import "_home";
 @import "_common";
+@import "_home";

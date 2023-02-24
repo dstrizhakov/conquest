@@ -5,7 +5,7 @@
 //========================================================
 .header {
 	z-index: 10;
-	background-color: #ffffff;
+	background-color: $mainBackgroundColor;
 
 		&__container {
 		}
@@ -112,8 +112,6 @@
 }
 
 
-
-
 //========================================================
 // !MAIN
 //========================================================
@@ -125,13 +123,19 @@
 
 	&__header {
 		max-height: rem(798);
+		background-color: $mainBackgroundColor;
 	}
 	&__popular {
 		min-height: rem(720);
 		background-color: #ffffff;
 	}
+	&__quality {
+		min-height: rem(520);
+		background-color: $mainBackgroundColor;
+	}
+	&__social {
+	}
 }
-
 
 //========================================================
 // !SECTION .header-page
@@ -175,7 +179,7 @@
 	}
 
 	&__button {
-		margin-top: 64px;
+		margin-top: rem(64);
 	}
 
 	&__images {
@@ -219,8 +223,8 @@
 		top: 50%;
 		left: -70%;
 		transform: translate(70%, -50%);
-		width: 500px;
-		height: 1000px;
+		width: rem(500);
+		height: rem(1000);
 		// background-color: #1B1A17;
 		background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%);
 		z-index: -1;
@@ -250,19 +254,6 @@
 		background-color: #8B8371;
 	}
 }
-.subtitle {
-	font-family: 'Playfair+Display', serif;
-	font-size: rem(30);
-	line-height: percent(40, 30);
-	color: #1b1a17;
-	white-space: nowrap;
-}
-.button {
-}
-
-
-
-
 
 //========================================================
 // !SECTION .popular-page
@@ -283,7 +274,7 @@
 	}
 
 	&__items {
-		margin-top: 70px;
+		margin-top: rem(70);
 	}
 }
 
@@ -308,18 +299,19 @@
 
 	&__row {
 		display: flex;
-		// margin: 0px -10px;
+		gap: rem(30);
 	}
 
 	&__item {
-		// padding: 0px 10px;
+		padding: rem(45) rem(40);
 		flex: 0 1 33.333%;
+		background-color: $mainBackgroundColor;
 	}
 }
 .item-popular {
 
 	&__content {
-	 min-height: 400px;
+	 min-height: rem(400);
 	}
 
 	&__title {
@@ -329,7 +321,7 @@
 		font-weight: 700;
 		color: rgba(27, 26, 23, 0.82);
 		font-family: 'Playfair+Display', serif;
-		margin-bottom: 10px;
+		margin-bottom: rem(10);
 	}
 
 	&__price {
@@ -340,8 +332,8 @@
 	}
 	&__price::after {
 		content: '₽';
-		font-size: 14px;
-		padding-left: 4px;
+		font-size: rem(14);
+		padding-left: rem(4);
 		
 	}
 
@@ -353,9 +345,9 @@
 		position: absolute;
 		inset: 0;
   	border-radius: 50%; 
-		width: 313px;
-		height: 313px;
-  	padding: 1px; 
+		width: rem(313);
+		height: rem(313);
+  	padding: rem(1); 
   	background:linear-gradient(-90deg,#E2D0C4,#ffffff); 
   	-webkit-mask: 
      linear-gradient(#fff 0 0) content-box, 
@@ -364,14 +356,13 @@
           mask-composite: exclude; 
 	}
 	&__image img {
-		// position: absolute;
-		width: 313px;
-		height: 313px;
+		width: rem(313);
+		height: rem(313);
 	}
 
 	&__actions {
 		margin-top: rem(18);
-		padding-left: 48px;
+		padding-left: rem(48);
 
 	}
 
@@ -393,6 +384,129 @@
 		background-color: #8B8371;
 	}
 }
+
+
+//========================================================
+// !SECTION .quality-page
+//========================================================
+
+.quality-page {
+
+	&__body {
+		height: rem(520);
+		position: relative;
+	}
+	&__body::after {
+content: '';
+position: absolute;
+top: 0;
+width: 35%;
+height: 100%;
+background-color: #F7F5EF;
+	}
+
+	&__row {
+		height: 100%;
+		display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: rem(70);
+	}
+
+	&__slider {
+		z-index: 1;
+	}
+
+	&__content {
+		max-width: rem(380);
+	}
+
+	&__title {
+		margin-bottom: rem(36);
+	}
+
+	&__text {
+		margin-bottom: rem(45);
+		line-height: 150%;
+	}
+
+	&__button {
+		background-color: #D4B098;
+	}
+}
+.slider-quality {
+	margin-top: rem(30);
+	&__image {
+	}
+
+	&__controlls {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: rem(20);
+		margin-top: rem(20);
+		margin-right: rem(83);
+		& img {
+			padding: rem(5);
+			cursor: pointer;
+		}
+	}
+}
+
+//========================================================
+// !SECTION .social-page
+//========================================================
+
+.social-page {
+
+	&__body {
+		padding: rem(80) 0;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__content {
+	}
+
+	&__title {
+		margin-bottom: rem(30);
+	}
+
+	&__text {
+		margin-bottom: rem(120);
+		font-size: rem(16);
+		line-height: percent(27, 16);
+		color: #444240;
+		& a {
+			font-weight: 700;
+		}
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+		& img {
+			cursor: pointer;
+		}
+	}
+
+	&__images {
+		display: flex;
+		gap: rem(10);
+		& span {
+			display: flex;
+			flex-direction: column;
+			gap: rem(10);
+		}
+	}
+	
+}
+
 
 //========================================================
 // !FOOTER
@@ -442,8 +556,6 @@
 		color: rgba(255, 255, 255, 1);
 	}
 
-
-
 	&__buyers {
 	}
 
@@ -464,15 +576,15 @@
 
 	&__logo {
 		display: flex;
-		gap: 5px;
+		gap: rem(5);
 		align-items: center;
 		font-family: 'Playfair+Display', serif;
 		font-size: rem(14);
 		line-height: rem(19);
 		letter-spacing: 0.14em;
 		& img {
-			width: 25px;
-			height: 25px;
+			width: rem(25);
+			height: rem(25);
 			filter: invert(1) contrast(2);
 		}
 	}

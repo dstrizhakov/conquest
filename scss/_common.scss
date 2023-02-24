@@ -12,3 +12,11 @@
 .button:hover {
 	background-color: #676666;
 }
+
+.subtitle {
+	font-family: 'Playfair+Display', serif;
+	font-size: rem(30);
+	line-height: percent(40, 30);
+	color: #1b1a17;
+	white-space: nowrap;
+}
