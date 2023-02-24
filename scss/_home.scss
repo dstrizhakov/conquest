@@ -4,6 +4,8 @@
 // !HEADER
 //========================================================
 .header {
+	z-index: 10;
+	background-color: #ffffff;
 
 		&__container {
 		}
@@ -122,6 +124,7 @@
 	}
 
 	&__header {
+		max-height: rem(798);
 	}
 }
 
@@ -134,7 +137,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 20px 0px 83px;
+		padding-left: rem(83);
 	}
 
 	&__content p {
@@ -206,6 +209,19 @@
 	}
 
 	&__backdrop {
+		position: absolute;
+		top:0;
+		left: 35%;
+		width: 500px;
+		height: 1000px;
+		// background-color: #1B1A17;
+		background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%);
+		z-index: -1;
+		overflow: hidden;
+		border-radius: 100% 0 0 100% / 50% 0 0 50%;
+	}
+	&__backdrop::before {
+		
 	}
 
 	&__detail {

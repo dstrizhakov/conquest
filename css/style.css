@@ -113,6 +113,10 @@ h6 {
   padding: 0 0.9375rem;
 }
 
+.header {
+  z-index: 10;
+  background-color: #ffffff;
+}
 .header__body {
   min-height: 5.3125rem;
   display: flex;
@@ -196,11 +200,15 @@ h6 {
   padding-top: 2px;
 }
 
+.page__header {
+  max-height: 49.875rem;
+}
+
 .header-page__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px 0px 83px;
+  padding-left: 5.1875rem;
 }
 .header-page__content p {
   line-height: 150%;
@@ -259,6 +267,17 @@ h6 {
   left: 5.1875rem;
   top: 50%;
   background-color: #8B8371;
+}
+.header-page__backdrop {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 500px;
+  height: 1000px;
+  background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%);
+  z-index: -1;
+  overflow: hidden;
+  border-radius: 100% 0 0 100%/50% 0 0 50%;
 }
 .header-page__detail {
   align-self: flex-end;
@@ -363,5 +382,5 @@ h6 {
 }
 
 .button:hover {
-  background-color: #64615f;
+  background-color: #444240;
 }
