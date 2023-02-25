@@ -229,6 +229,7 @@ body.lock {
   .header__body {
     min-height: 85px;
     position: relative;
+    justify-content: center;
   }
   .header__body::before {
     content: "";
@@ -239,9 +240,6 @@ body.lock {
     height: 85px;
     background: #FDFDFB;
     z-index: 5;
-  }
-  .header__body {
-    justify-content: center;
   }
   .header__logo {
     flex: 1 1 auto;
