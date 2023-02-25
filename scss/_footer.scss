@@ -1,0 +1,95 @@
+//========================================================
+// !FOOTER
+//========================================================
+.footer {
+	background-color: #444240;
+	color: #ffffff;
+	min-height: rem(275);
+
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-around;
+		padding-top: rem(70);
+	}
+
+	&__main {
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		margin-top: rem(28);
+		font-size: rem(12);
+		line-height: rem(14);
+		color: rgba(255, 255, 255, 0.75);
+	}
+
+	&__about {
+	}
+
+	&__list {
+		margin-top: rem(33);
+	}
+
+	&__link {
+		display: inline-block;
+		font-size: rem(12);
+		line-height: rem(14);
+		color: rgba(255, 255, 255, 0.75);
+		padding: rem(5) 0;
+		transition: all 0.3s ease 0s;
+	}
+	&__link:hover {
+		color: rgba(255, 255, 255, 1);
+	}
+
+	&__buyers {
+	}
+
+	&__payment {
+	}
+}
+.footer-column {
+ & h2 {
+	margin-top: rem(4);
+	font-weight: 700;
+	font-size: rem(14);
+	line-height: rem(16);
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+ }
+}
+.foorer {
+
+	&__logo {
+		display: flex;
+		gap: rem(5);
+		align-items: center;
+		font-family: 'Playfair+Display', serif;
+		font-size: rem(14);
+		line-height: rem(19);
+		letter-spacing: 0.14em;
+		& img {
+			width: rem(25);
+			height: rem(25);
+			filter: invert(1) contrast(2);
+		}
+	}
+}
+.contacts-footer {
+
+	&__item {
+		display: inline-block;
+		font-size: rem(12);
+		line-height: rem(14);
+		color: rgba(255, 255, 255, 0.75);
+		padding: rem(5) 0;
+		transition: all 0.3s ease 0s;
+	}
+	&__item:hover {
+		color: rgba(255, 255, 255, 1);
+	}
+}
