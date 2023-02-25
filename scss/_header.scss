@@ -113,6 +113,22 @@
 }
 
 @media (max-width: $tablet) {
+
+	.header__body {
+		min-height: 85px;
+		position: relative;
+	}
+	.header__body::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -10%;
+		width: 120%;
+		height: 85px;
+		background: #FDFDFB;
+		z-index: 5;
+	}
+
 	.header {
 		&__body {
 			justify-content: center;

@@ -227,6 +227,20 @@ body.lock {
 
 @media (max-width: 61.99875em) {
   .header__body {
+    min-height: 85px;
+    position: relative;
+  }
+  .header__body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 85px;
+    background: #FDFDFB;
+    z-index: 5;
+  }
+  .header__body {
     justify-content: center;
   }
   .header__logo {
