@@ -128,6 +128,7 @@
 	&__popular {
 		min-height: rem(720);
 		background-color: #ffffff;
+
 	}
 	&__quality {
 		min-height: rem(520);
@@ -147,6 +148,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding-left: rem(83);
+		overflow: hidden;
 	}
 
 	&__content p {
@@ -183,10 +185,10 @@
 	}
 
 	&__images {
-		// flex: 0 0 50%;
 		display: flex;
 		align-items: flex-start;
 		position: relative;
+		
 	}
 
 	&__price {
@@ -216,6 +218,7 @@
 	}
 
 	&__image {
+		z-index: 1;
 	}
 
 	&__backdrop {
@@ -225,9 +228,8 @@
 		transform: translate(70%, -50%);
 		width: rem(500);
 		height: rem(1000);
-		// background-color: #1B1A17;
 		background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%);
-		z-index: -1;
+		z-index: 0;
 		overflow: hidden;
 		border-radius: 100% 0 0 100% / 50% 0 0 50%;
 	}
@@ -262,6 +264,7 @@
 .popular-page {
 
 	&__body {
+
 	}
 
 	&__title {

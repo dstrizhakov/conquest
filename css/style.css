@@ -240,6 +240,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   padding-left: 5.1875rem;
+  overflow: hidden;
 }
 .header-page__content p {
   line-height: 150%;
@@ -299,6 +300,9 @@ h6 {
   top: 50%;
   background-color: #8B8371;
 }
+.header-page__image {
+  z-index: 1;
+}
 .header-page__backdrop {
   position: absolute;
   top: 50%;
@@ -307,7 +311,7 @@ h6 {
   width: 31.25rem;
   height: 62.5rem;
   background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%);
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
   border-radius: 100% 0 0 100%/50% 0 0 50%;
 }
