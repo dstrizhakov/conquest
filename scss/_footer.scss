@@ -1,13 +1,8 @@
-//========================================================
-// !FOOTER
-//========================================================
+
 .footer {
 	background-color: #444240;
 	color: #ffffff;
 	min-height: rem(275);
-
-	&__container {
-	}
 
 	&__body {
 		display: flex;
@@ -23,7 +18,7 @@
 		flex-direction: column;
 		margin-top: rem(28);
 		font-size: rem(12);
-		line-height: rem(14);
+		line-height: percent(14, 12);
 		color: rgba(255, 255, 255, 0.75);
 	}
 
@@ -37,7 +32,7 @@
 	&__link {
 		display: inline-block;
 		font-size: rem(12);
-		line-height: rem(14);
+		line-height: percent(14, 12);
 		color: rgba(255, 255, 255, 0.75);
 		padding: rem(5) 0;
 		transition: all 0.3s ease 0s;
@@ -57,7 +52,7 @@
 	margin-top: rem(4);
 	font-weight: 700;
 	font-size: rem(14);
-	line-height: rem(16);
+	line-height: percent(16, 14);
 	letter-spacing: 0.07em;
 	text-transform: uppercase;
  }
@@ -70,7 +65,7 @@
 		align-items: center;
 		font-family: 'Playfair+Display', serif;
 		font-size: rem(14);
-		line-height: rem(19);
+		line-height: percent(19, 14);;
 		letter-spacing: 0.14em;
 		& img {
 			width: rem(25);
@@ -84,7 +79,7 @@
 	&__item {
 		display: inline-block;
 		font-size: rem(12);
-		line-height: rem(14);
+		line-height: percent(14, 12);
 		color: rgba(255, 255, 255, 0.75);
 		padding: rem(5) 0;
 		transition: all 0.3s ease 0s;
@@ -92,4 +87,33 @@
 	&__item:hover {
 		color: rgba(255, 255, 255, 1);
 	}
+}
+
+@media (max-width: $mobile) { 
+
+	.footer {
+		&__body {
+			flex-direction: column;
+		}
+	}
+
+	.footer {
+		padding-top:rem(30);
+	
+			&__body {
+				padding-top: rem(0);
+				padding-bottom: rem(30);
+			}
+			& a {
+				font-size: rem(18);
+				padding: 10px;
+			}
+		}
+
+		.footer-column {
+			padding-bottom: rem(30);
+			& h2 {
+			 font-size: rem(18);
+			}
+		 }
 }

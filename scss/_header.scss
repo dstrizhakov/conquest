@@ -1,13 +1,7 @@
-//========================================================
-// !HEADER
 
-//========================================================
 .header {
 	z-index: 10;
 	background-color: $mainBackgroundColor;
-
-		&__container {
-		}
 
 		&__body {
 			min-height: rem(85);
@@ -18,7 +12,6 @@
 
 		&__logo {
 			display: flex;
-			gap: 5px;
 			align-items: center;
 			font-family: 'Playfair+Display', serif;
 			font-size: rem(12);
@@ -26,6 +19,9 @@
 			letter-spacing: 0.14em;
 			color: #555248;
 			z-index: 10;
+			& span {
+				padding-left: 5px;
+			}
 		}
 
 		&__menu {
@@ -42,9 +38,6 @@
 		}
 }
 .menu {
-
-		&__body {
-		}
 
 		&__list {
 			display: flex;
@@ -67,9 +60,6 @@
 }
 .actions-header {
 
-		&__search {
-		}
-
 		&__favorites {
 			position: relative;
 			& span {
@@ -86,7 +76,6 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				padding-top: 2px;
 			}
 
 		}
@@ -116,7 +105,7 @@
 
 	.header {
 		&__body {
-			min-height: 85px;
+			min-height: rem(85);
 			position: relative;
 			justify-content: center;
 		}
@@ -126,16 +115,16 @@
 			top: 0;
 			left: -10%;
 			width: 120%;
-			height: 85px;
-			background: #FDFDFB;
+			height: rem(85);
+			background: $mainBackgroundColor;
 			z-index: 5;
 		}
 		&__logo {
 		flex: 1 1 auto;
 		}
 		.menu__icon {
-			flex: 0 0 30px;
-			margin-right: 30px;
+			flex: 0 0 rem(30);
+			margin-right: rem(20);
 		}
 	}
 
