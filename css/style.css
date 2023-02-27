@@ -344,7 +344,7 @@ body.lock {
   overflow: hidden;
 }
 .header-page__content {
-  z-index: 10;
+  z-index: 2;
 }
 .header-page__content p {
   line-height: 150%;
