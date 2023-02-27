@@ -1,12 +1,5 @@
 
-//========================================================
-// !MAIN
-//========================================================
-
 .page {
-
-	&__container {
-	}
 
 	&__header {
 		max-height: rem(798);
@@ -21,13 +14,8 @@
 		min-height: rem(520);
 		background-color: $mainBackgroundColor;
 	}
-	&__social {
-	}
 }
 
-//========================================================
-// !SECTION .header-page
-//========================================================
 .header-page {
 
 	&__body {
@@ -36,6 +24,10 @@
 		align-items: center;
 		padding-left: rem(83);
 		overflow: hidden;
+
+	}
+	&__content {
+		z-index: 10;
 	}
 
 	&__content p {
@@ -82,7 +74,6 @@
 		display: inline-flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 8px;
 		position: relative;
 		font-family: 'Prata';
 		line-height: percent(22, 16);
@@ -92,6 +83,7 @@
 	}
 	&__price::after {
 		content: url(../img/icons/ruble.svg);
+		padding-left: 8px;
 	}
 
 	&__price::before {
@@ -120,9 +112,6 @@
 		overflow: hidden;
 		border-radius: 100% 0 0 100% / 50% 0 0 50%;
 	}
-	&__backdrop::before {
-		
-	}
 
 	&__detail {
 		align-self: flex-end;
@@ -144,15 +133,7 @@
 	}
 }
 
-//========================================================
-// !SECTION .popular-page
-//========================================================
-
 .popular-page {
-
-	&__body {
-
-	}
 
 	&__title {
 		padding: rem(50) 0 0 0;
@@ -184,6 +165,7 @@
 
 	}
 }
+
 .items-popular {
 
 	&__row {
@@ -197,6 +179,7 @@
 		background-color: $mainBackgroundColor;
 	}
 }
+
 .item-popular {
 
 	&__content {
@@ -275,7 +258,7 @@
 }
 
 //========================================================
-// !SECTION .quality-page
+// SECTION .quality-page
 //========================================================
 
 .quality-page {
@@ -388,7 +371,7 @@ background-color: #F7F5EF;
 }
 
 //========================================================
-// !SECTION .social-page
+// SECTION .social-page
 //========================================================
 
 .social-page {
@@ -408,6 +391,7 @@ background-color: #F7F5EF;
 	}
 
 	&__title {
+		white-space: normal;
 		margin-bottom: rem(30);
 	}
 
@@ -424,8 +408,10 @@ background-color: #F7F5EF;
 	&__social {
 		display: flex;
 		align-items: center;
-		gap: rem(20);
+
+		// gap: rem(20);
 		& img {
+			padding: 0 rem(10);
 			cursor: pointer;
 		}
 	}
@@ -442,104 +428,8 @@ background-color: #F7F5EF;
 	
 }
 
-// //========================================================
-// // !FOOTER
-// //========================================================
-// .footer {
-// 	background-color: #444240;
-// 	color: #ffffff;
-// 	min-height: rem(275);
-
-// 	&__container {
-// 	}
-
-// 	&__body {
-// 		display: flex;
-// 		justify-content: space-around;
-// 		padding-top: rem(70);
-// 	}
-
-// 	&__main {
-// 	}
-
-// 	&__contacts {
-// 		display: flex;
-// 		flex-direction: column;
-// 		margin-top: rem(28);
-// 		font-size: rem(12);
-// 		line-height: rem(14);
-// 		color: rgba(255, 255, 255, 0.75);
-// 	}
-
-// 	&__about {
-// 	}
-
-// 	&__list {
-// 		margin-top: rem(33);
-// 	}
-
-// 	&__link {
-// 		display: inline-block;
-// 		font-size: rem(12);
-// 		line-height: rem(14);
-// 		color: rgba(255, 255, 255, 0.75);
-// 		padding: rem(5) 0;
-// 		transition: all 0.3s ease 0s;
-// 	}
-// 	&__link:hover {
-// 		color: rgba(255, 255, 255, 1);
-// 	}
-
-// 	&__buyers {
-// 	}
-
-// 	&__payment {
-// 	}
-// }
-// .footer-column {
-//  & h2 {
-// 	margin-top: rem(4);
-// 	font-weight: 700;
-// 	font-size: rem(14);
-// 	line-height: rem(16);
-// 	letter-spacing: 0.07em;
-// 	text-transform: uppercase;
-//  }
-// }
-// .foorer {
-
-// 	&__logo {
-// 		display: flex;
-// 		gap: rem(5);
-// 		align-items: center;
-// 		font-family: 'Playfair+Display', serif;
-// 		font-size: rem(14);
-// 		line-height: rem(19);
-// 		letter-spacing: 0.14em;
-// 		& img {
-// 			width: rem(25);
-// 			height: rem(25);
-// 			filter: invert(1) contrast(2);
-// 		}
-// 	}
-// }
-// .contacts-footer {
-
-// 	&__item {
-// 		display: inline-block;
-// 		font-size: rem(12);
-// 		line-height: rem(14);
-// 		color: rgba(255, 255, 255, 0.75);
-// 		padding: rem(5) 0;
-// 		transition: all 0.3s ease 0s;
-// 	}
-// 	&__item:hover {
-// 		color: rgba(255, 255, 255, 1);
-// 	}
-// }
-
 //========================================================
-// ?ADAPTIVE
+// ADAPTIVE
 //========================================================
 @media (max-width: $pc) {
 
@@ -767,6 +657,7 @@ width: 0;
 		background-color: #D4B098;
 	}
 }
+
 .slider-quality {
 
 	&__image {
@@ -780,6 +671,7 @@ width: 0;
 		}
 	}
 }
+
 .social-page {
 
 	&__body {
@@ -803,22 +695,17 @@ flex-direction: column-reverse;
 	}
 
 	&__social {
-		display: flex;
-		align-items: center;
 		justify-content: center;
-		gap: rem(40);
-		& img {
-			cursor: pointer;
-		}
 	}
 
 	&__images {
 		display: flex;
-		gap: rem(10);
+		& img {
+			padding-bottom: rem(10);
+		}
 		& span {
 			display: flex;
 			flex-direction: column;
-			gap: rem(10);
 		}
 	}
 	
@@ -828,12 +715,16 @@ flex-direction: column-reverse;
 @media (max-width: $mobile) {
 
 	.header-page {
+		&__body {
+			padding: rem(10) 0;
+		}
 
 		&__title {
 			font-size: rem(34);
 			margin-bottom: rem(5);
 			white-space: normal;
 		}
+	
 		&__image {
 			padding-right: rem(5);
 		}
@@ -845,6 +736,8 @@ flex-direction: column-reverse;
 		}
 	
 		&__subtitle {
+			white-space: normal;
+			margin-top: rem(10);
 			margin-bottom: rem(10);
 		}
 	
@@ -885,22 +778,16 @@ flex-direction: column-reverse;
 	
 		&__items {
 			margin-top: rem(40);
+			margin-bottom: rem(40);
 		}
 	}
 
 	.quality-page {
-
+		padding-bottom: 20px;
 		&__row {
 		gap: rem(20);
 		}
 	}
-
-.subtitle{
-	white-space: normal;
-	margin: 0;
-	margin-bottom: 20px;
-	margin-top: 40px;
-}
 
 	.slider-quality {
 
@@ -932,19 +819,8 @@ flex-direction: column-reverse;
 		}
 		
 	}
-
-	.footer {
-	padding: 40px;
-
-		&__body {
-			flex-wrap: wrap;
-			justify-content: flex-start;
-			row-gap: rem(50);
-			column-gap: rem(20);
-			padding-top: rem(0);
-		}
-	}
 }
+
 @media (max-width: $mobileSmall) {
 
 	.header-page {
@@ -952,13 +828,17 @@ flex-direction: column-reverse;
 		&__body {
 			padding-left: 0;
 			flex-direction: column-reverse;
-			row-gap: rem(30);
+			padding: rem(20) 0;
 		}
 
 		&__image {
 			padding: 0;
 		}
-	
+
+		&__title {
+			margin-top: 30px;
+		}
+
 		&__title::before {
 			width: rem(20);
 			height: rem(1);
@@ -967,7 +847,7 @@ flex-direction: column-reverse;
 	
 		&__subtitle {
 			margin-bottom: rem(10);
-			margin-top: rem(20);
+			margin-top: rem(10);
 		}
 	
 		&__button {
